@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take a Quiz</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="assets/js/navbar.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body style="background-color: #afbbd0;">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Quiz</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto" id="nav-links"></ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item" id="auth-link"><a class="nav-link" href="login.html">Log In</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <div class="container-fluid d-flex">
+        <div class="col-md-3" style="height: 90vh; padding: 15px;">
+            <div class="box" style="height: 100%; padding: 15px;">
+                <h5>Your Quiz Subscriptions</h5>
+                <ul id="subscription-list">
+                    <li><a href="#" class="quiz-name">Quiz 1</a></li>
+                    <li><a href="#" class="quiz-name">Quiz 2</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-9" style="padding: 15px;">
+            <div class="box" style="margin-bottom: 20px; padding: 15px; display: flex; justify-content: space-between; align-items: center;">
+                <h4 id="quiz-title">Quiz Name</h4>
+                <div>
+                    <button class="btn btn-primary" id="startQuizBtn">Start Quiz</button>
+                    <button class="btn btn-secondary" id="myAttemptsBtn">My Attempts</button>
+                    <button class="btn btn-warning" id="reviewBtn">Review</button>
+                    <button class="btn btn-danger" id="unsubscribeBtn">Unsubscribe</button>
+                </div>
+            </div>
+            <div class="box" style="margin-bottom: 20px; padding: 15px; display: flex; justify-content: space-between;">
+                <div id="timeRemaining">Time Remaining: 00:00</div>
+                <button class="btn btn-danger" id="endQuizBtn">End Quiz</button>
+            </div>
+
+            <div class="box" style="min-height: 65vh;">
+                <h5>Quiz Questions</h5>
+                <div id="quiz-questions">
+                     <br>
+                    <p>Quiz content will be loaded here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Handle quiz name selection from the left column
+        document.querySelectorAll('.quiz-name').forEach(item => {
+            item.addEventListener('click', function() {
+                document.getElementById('quiz-title').textContent = item.textContent;
+                // Django   
+            });
+        });
+
+        // Example functions for buttons
+        document.getElementById("startQuizBtn").addEventListener("click", function() {
+            // Start quiz logic here
+        });
+
+        document.getElementById("unsubscribeBtn").addEventListener("click", function() {
+            // Unsubscribe logic here
+        });
+
+        document.getElementById("endQuizBtn").addEventListener("click", function() {
+            // End quiz logic here
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.navbar {
+    background-color: black !important;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 56px - 20px); 
+    overflow: hidden;
+}
+
+
+.box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.login-box {           
+    width: 25%;
+}

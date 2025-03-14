@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Quiz</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="assets/js/navbar.js" defer></script>
+</head>
+<body style="background-color: #afbbd0;">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Quiz</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto" id="nav-links"></ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item" id="auth-link"><a class="nav-link" href="login.html">Log In</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid center-content">
+        <div class="row w-100">
+            <div class="col-md-2">
+                <div class="box">
+                    <h5>Quiz Formatting</h5><br>
+                    <button class="btn btn-secondary btn-sm w-100 mb-3">Background Color</button>
+                    <button class="btn btn-secondary btn-sm w-100 mb-3">Text Font</button>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-secondary btn-sm">Bold</button>
+                        <button class="btn btn-secondary btn-sm">Italic</button>
+                        <button class="btn btn-secondary btn-sm">Underline</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="box">
+                    <h4>Create a Quiz</h4><br>
+                    <input type="text" class="form-control mb-3 quiz-name-input" placeholder="Quiz Name">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Question 1">
+                        <label class="mt-2">Answer Choices:</label>
+                        <input type="text" class="form-control mb-2" placeholder="Choice A">
+                        <input type="text" class="form-control mb-2" placeholder="Choice B">
+                        <input type="text" class="form-control mb-2" placeholder="Choice C">
+                        <label class="mt-2">Question Type:</label>
+                        <select class="form-select mb-2">
+                            <option>Multiple Choice</option>
+                            <option>True/False</option>
+                            <option>Extended Response</option>
+                        </select>
+                        <label>Correct Answer:</label>
+                        <div class="d-flex gap-2">
+                            <input type="radio" name="correctAnswer" id="answerA"><label for="answerA">A</label>
+                            <input type="radio" name="correctAnswer" id="answerB"><label for="answerB">B</label>
+                            <input type="radio" name="correctAnswer" id="answerC"><label for="answerC">C</label>
+                        </div>
+                    </div>
+                    <button class="btn btn-success">Add Another Question</button>
+                    <button class="btn btn-primary">Finish & Save</button>
+                    <button class="btn btn-danger">Delete Question</button>
+                    <button class="btn btn-danger">Delete Quiz</button>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="box">
+                    <h5>Tools</h5><br>
+                    <div class="d-grid gap-2">
+                        <div class="row">
+                            <div class="col-6"><button class="btn btn-secondary w-100">Save</button></div>
+                            <div class="col-6"><button class="btn btn-secondary w-100">Edit</button></div>
+                            <br><br>
+                            <div class="col-6"><button class="btn btn-secondary w-100">Publish</button></div>
+                            <div class="col-6"><button class="btn btn-secondary w-100">New</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
